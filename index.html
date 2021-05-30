@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <title>A Leaflet map!</title>
@@ -15,7 +16,7 @@
   <script>
 
   // initialize the map
-  var map = L.map('map').setView([42.35, -71.08], 13);
+  var map = L.map('map').setView([-33.89727021, 150.9856173], 13);
 
   // load a tile layer
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -26,7 +27,7 @@
     }).addTo(map);
 	
 	 // load GeoJSON from an external file
-  $.getJSON("rodents.geojson",function(data){
+  $.getJSON("data.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
   });
