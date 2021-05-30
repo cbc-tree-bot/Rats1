@@ -26,9 +26,11 @@
     }).addTo(map);
 	
 	 // load GeoJSON from an external file
-  $.getJSON("1.geojson",function(data)
-  $.getJSON("2.geojson",function(data)
-  $.getJSON("3.geojson",function(data){
+  $.getJSON("2.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
+	   $.getJSON("3.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
   });
