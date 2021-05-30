@@ -16,7 +16,7 @@
   <script>
 
   // initialize the map
-  var map = L.map('map').setView([-33.89727021, 150.9856173], 13);
+  var map = L.map('map').setView([-33.9296, 151.0537], 13);
 
   // load a tile layer
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -27,22 +27,10 @@
     }).addTo(map);
 	
 	 // load GeoJSON from an external file
-  $.getJSON("1.geojson",function(data){
+  $.getJSON("data.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
   });
-	// load GeoJSON from an external file
-  $.getJSON("2.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-	  
-	  // load GeoJSON from an external file
-  $.getJSON("3.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-	  
 
   </script>
 </body>
